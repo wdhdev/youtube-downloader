@@ -1,4 +1,4 @@
-# ⬇️ YTDL Script
+# ⬇️ YouTube Downloader
 Easily download YouTube videos using a simple program!
 
 ## ✨ Usage
