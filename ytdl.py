@@ -1,4 +1,7 @@
-import os, pytube, sys, uuid
+import os
+import pytube
+import sys
+import uuid
 
 url = input("Please enter a YouTube video URL:\n>> ")
 
