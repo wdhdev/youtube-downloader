@@ -2,7 +2,7 @@
 Easily download YouTube videos using a simple program!
 
 ## ✨ Usage
-1. Download the [`ytdl.exe`](https://raw.githubusercontent.com/wdhdev/ytdl-script/main/ytdl.exe) program.
+1. [Download](https://raw.githubusercontent.com/wdhdev/ytdl-script/main/ytdl.exe) `ytdl.exe`.
 2. Run the program and enter in a YouTube video URL.
 3. The program will download the video and save it in the same directory `ytdl.exe` is in.
 
