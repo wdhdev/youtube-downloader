@@ -7,14 +7,12 @@ url = input("Please enter a YouTube video URL:\n>> ")
 
 yt = pytube.YouTube(url)
 
-print()
-print("------- Video -------")
+print("\n------- Video -------")
 print("Channel:", yt.author)
 print("Title:", yt.title)
 print("Length (seconds):", yt.length)
 print("Uploaded:", yt.publish_date)
-print("---------------------")
-print()
+print("---------------------\n")
 
 video = yt.streams.get_highest_resolution()
 name = str(uuid.uuid4()) + ".mp4"
