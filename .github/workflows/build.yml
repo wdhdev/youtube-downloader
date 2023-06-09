@@ -1,0 +1,38 @@
+name: Build
+
+on:
+    push:
+        branches: [main]
+        paths:
+            - "ytdl.py"
+
+    workflow_dispatch:
+
+jobs:
+    endless-explorer:
+        name: Endless Explorer
+        runs-on: windows-latest
+
+        steps:
+            - uses: actions/checkout@v3
+
+            - uses: actions/setup-python@v4
+              with:
+                  python-version: "3.11"
+
+            - name: Install Dependencies
+              run: |
+                  python -m pip install --upgrade pip
+                  pip install pyinstaller
+
+            - name: Build
+              run: pyinstaller --onefile --icon "images/icon.ico" --distpath=./ ytdl.py
+
+            - name: Commit
+              run: |
+                  ls
+                  git config --global user.email "bot@williamharrison.dev"
+                  git config --global user.name "WDH-Bot"
+                  git add ytdl.exe
+                  git commit -m "chore: build executable"
+                  git push
